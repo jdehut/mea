@@ -10,7 +10,7 @@
 
 ## _To Do_ à court terme :
 - Styliser le menu paramètre.
-- Ajout d'un bouton "Nouveau"
+~~- Ajout d'un bouton "Nouveau"~~
 - Drag and drop et tous le processus d'ouverture de fichier
 - Conserver seulement le nom de fichier avant la compilation
 - Optimisation du code.
@@ -27,7 +27,7 @@
 
 
 ## Bugs connus :
-- Après une présentation (prompteur), le raccourci CTRL+S ne fonctionne plus. Rédémarrer l'application résoud évidemment le problème. L'intégration des raccourcis est une source constante de soucis.
+~~- Après une présentation (prompteur), le raccourci CTRL+S ne fonctionne plus. Rédémarrer l'application résoud évidemment le problème. L'intégration des raccourcis est une source constante de soucis.~~
 - L'écriture automatique du fichier à la fermeture de l'application peut induire une consommation de ressources excessives alors que l'application est fermée.
 
 #### _caveat emptor_
@@ -61,7 +61,7 @@ _Mea_ est le reflet de mon évolution. Un point dans un flux, un moment donné d
 Si vous avez la curiosité d’installer et d’utiliser ce logiciel, vous aurez alors sur votre ordinateur le produit d’une forme de procrastination de mon doctorat. Les numéros de version reflètent en effet le nombre de jours passés à réaliser ce projet, du temps volé à coup de minutes éparses, du temps que je n’ai donc pas passé à rédiger ma thèse, même si le projet nourrit ma réflexion. Je tiens à remercier infiniment ici monsieur Philippe Brunet, qui me dirige. Ce logiciel doit beaucoup au projet [marathon](https://www.demodocos.fr/ch2.html) mais surtout, les quelques minutes qu’il a passé à l'utiliser dans une version préliminaire ont contribué à en modifier profondément la logique. Merci chaleureusement à Gilles de Rosny de nous autoriser à inclure la police Demodocos4.
 
 #### Sur les intitulés des menus. 
-Comme les questions de la métaphore en informatique me questionnent, les différents intitulés reflètent un certain état de ma réflexion sur la question. Changer ces dénominations demeure trivial. S'il est de mon souhait, malgré tout, que cela ne semble pas trop baroque, je suis égoistement le destinataire de ces intitulés.
+Comme les questions de la métaphore en informatique me questionnent, les différents intitulés reflètent un certain état de ma réflexion sur la question. Changer ces dénominations demeure trivial. S'il est de mon souhait que cela ne semble pas trop baroque, je suis égoistement le destinataire de ces intitulés, malgré tout. La possibilité de les changer et créer est sur la feuille de route... 
 
 
 
