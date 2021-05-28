@@ -24,6 +24,7 @@
 - intégration de l'api Github.
 - menu de l'application sous MacOs
 - coloration syntaxique
+- Vim intégration
 
 
 ## Bugs connus :
