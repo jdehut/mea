@@ -8,24 +8,6 @@
 - Intégration de Git
 
 
-## _To Do_ à court terme :
-- Styliser le menu paramètre.
-~~- Ajout d'un bouton "Nouveau"~~
-- Drag and drop et tous le processus d'ouverture de fichier
-- Conserver seulement le nom de fichier avant la compilation
-- Optimisation du code.
-- Version pour MacOs et Windows.
-
-## _To Do_ à long terme : 
-- Mode page ( en fait j'ai passé la majeure partie du développement, non comptabilisé ici à faire en sorte de simuler des pages sur lequels je pourrais écrire, il y a là d'ailleurs une des raisons d'être de ce logiciel. Le système est fonctionelle, mais je tarde à l'intégrer devant la complexité du code et son ancienneté)
-- Éditeur de rendu pour Pandoc. Un autre point de départ de ce projet est la volonté de créer une forme de documentation interactive pour Pandoc. Ce projet est toujours en cours et se trouverait naturellement intégré ici.
-- Prévisualisation
-- intégration de l'api de Zotero.
-- intégration de l'api Github.
-- menu de l'application sous MacOs
-- coloration syntaxique
-- Vim intégration
-
 
 ## Bugs connus :
 ~~- Après une présentation (prompteur), le raccourci CTRL+S ne fonctionne plus. Rédémarrer l'application résoud évidemment le problème. L'intégration des raccourcis est une source constante de soucis.~~
@@ -67,7 +49,23 @@ Comme les questions de la métaphore en informatique me questionnent, les diffé
 
 
 
+## _To Do_ à court terme :
+- Styliser le menu paramètre.
+~~- Ajout d'un bouton "Nouveau"~~
+- Drag and drop et tous le processus d'ouverture de fichier
+- Conserver seulement le nom de fichier avant la compilation
+- Optimisation du code.
+- Version pour MacOs et Windows.
 
+## _To Do_ à long terme : 
+- Mode page ( en fait j'ai passé la majeure partie du développement, non comptabilisé ici à faire en sorte de simuler des pages sur lequels je pourrais écrire, il y a là d'ailleurs une des raisons d'être de ce logiciel. Le système est fonctionelle, mais je tarde à l'intégrer devant la complexité du code et son ancienneté)
+- Éditeur de rendu pour Pandoc. Un autre point de départ de ce projet est la volonté de créer une forme de documentation interactive pour Pandoc. Ce projet est toujours en cours et se trouverait naturellement intégré ici.
+- Prévisualisation
+- intégration de l'api de Zotero.
+- intégration de l'api Github.
+- menu de l'application sous MacOs
+- coloration syntaxique
+- Intégration de Vim(sort of)
 
 
  
