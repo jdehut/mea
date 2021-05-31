@@ -7,7 +7,7 @@
 - Intégration de Pandoc
 - Intégration de Git
 
-Pour télécharger une version c'est **[ici]**(https://github.com/jdehut/mea/releases/tag/0.17b).
+Pour télécharger une version c'est [**ici**](https://github.com/jdehut/mea/releases/tag/0.17b).
 
 ## Bugs connus :
 ~~- Après une présentation (prompteur), le raccourci CTRL+S ne fonctionne plus. Rédémarrer l'application résoud évidemment le problème. L'intégration des raccourcis est une source constante de soucis.~~
