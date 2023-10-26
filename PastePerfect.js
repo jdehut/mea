@@ -31,6 +31,5 @@ var Lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 //Ref biblio
 
 
-  
-  
+var Picture_past='![picture of cat[^note]\\label{cat}](/home/julien/Dropbox/Documents/Images/Thesis/Cat_poster_1.jpg){width="300px" height="300px"}';
   

@@ -229,15 +229,16 @@ var path = require("path");
 var namefile = localStorage.getItem("InputNameSoloC").trim();
 var pathfile = localStorage.getItem("FilePathCook").trim();
 var gitpath = localStorage.getItem("GitPath").trim();
-
-var name_file = localStorage.getItem("filgit").trim();
-var path_file = localStorage.getItem("fogit").trim();
-var set_location = path_file+name_file;
+var set_location = localStorage.getItem("InputFile").trim();
 var destination = document.getElementById("HashBackInput").value;
 var lasthash = localStorage.getItem("lasthashcook");
+var namedata2write = "temp_rest";
+var temppath = localStorage.getItem("folder_path").trim();
+
+
 //  "git revert (--continue | --abort | --quit)" ?
 var process = require("child_process");
-process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "revert --no-commit"+" "+destination+".."+lasthash+" "+"&& "+gitpath+" "+"commit -m 'point de restauration'",function (err,stdout,stderr) {
+process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "checkout"+" "+destination+" "+namefile+" "+"&& "+gitpath+" "+"commit -m 'point de restauration'",function (err,stdout,stderr) {
 
     if (err) {
 	    document.getElementById("LogTerm").innerText= stderr;
@@ -248,11 +249,13 @@ process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "revert --no-commit"
             document.getElementById("LogTerm").innerText= lasthash+destination; 
                     
          
- //window.location.reload();
  }    
                 
 })
-	
+
+
+
+
 }
 
 
