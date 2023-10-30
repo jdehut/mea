@@ -115,9 +115,9 @@
   </div>
 	
 		<div id="editor" contenteditable="true">
-  <p id="WISINWYG">
+  <!-- <p id="WISINWYG">
 	 
-      </p>
+      </p> -->
       
 </div>
 
@@ -267,12 +267,12 @@ function actio(){
  window.onunload = function(){
   SaveCaretEP();
 	     if (localStorage.getItem("OpenStartCook")== "false"){
-        localStorage.removeItem("InputFile");
+        //localStorage.removeItem("InputFile");
         localStorage.removeItem("CaretPosition");
         localStorage.removeItem("CaretPositionN");	 
 	  }
     else if (localStorage.getItem("OpenStartCook")== null){
-        localStorage.removeItem("InputFile");
+       // localStorage.removeItem("InputFile");
         localStorage.removeItem("CaretPosition");
         localStorage.removeItem("CaretPositionN");	 
 	  }
@@ -295,7 +295,6 @@ saveNullExit();
 		}
     window.onload = function() {
      // document.getElementById("editor").scrollTo(1000, 500);
-     
 window.addEventListener("storage", refresh);	
 document.getElementById("editor").style.textAlign = localStorage.getItem("align_s");
 document.getElementById("editor").style.color = localStorage.getItem("color_s");
@@ -320,13 +319,33 @@ if (localStorage.getItem("Check_MenuOut_cook")== "false"){
 
 var fs = require("fs");	
   var path = require("path");	            
-	fs.readFile("temp_rest", function (err, data) {
+	var path_fileA = localStorage.getItem("folder_path");
+  var namedata2writeN = "temp_rest";
+  
+
+  if (localStorage.getItem("InputFile")=== null){
+    document.title = "mĕa";     
+
+  fs.readFile(path_fileA + "/" + namedata2writeN, function (err, data) {
+  
+  //fs.readFile("temp_rest", function (err, data) {
   if (err) throw err,
   console.log(data);
   document.getElementById("editor").innerText = data;
   openGO();
 }); 
+  }
+  else{
+    document.title = localStorage.getItem("InputFile");
+    var set_location = localStorage.getItem("InputFile").trim();
+    fs.readFile(set_location, function (err, data) {
+ if (err) throw err;
+ document.getElementById("editor").innerText = data;
 
+});
+
+
+  }
 RegisterShortcut();
 
 }	
@@ -336,33 +355,37 @@ RegisterShortcut();
 	var gui = require("nw.gui");
 	var path = require('path');
 	var namedata2write = "temp_rest";
-  var temppath = localStorage.getItem("folder_path").trim();
+  var path_fileA = localStorage.getItem("folder_path");
+  var namedata2writeN = "temp_rest";
+  let text_to_save = document.getElementById("editor").innerText;
+  //workingA
+  // fs.writeFileSync(path_fileA + "/" + namedata2writeN, text_to_save, (err) => {
+  //           if (err) throw err;
+  //       });
 
-  var text_to_save = document.getElementById("editor").innerText;
-fs.writeFile(namedata2write, text_to_save, (err) => {  
-       if (err) throw err;
-});
-  /*
-	var text_to_save = document.getElementById("editor").innerText;
-  var set_location = localStorage.getItem("InputFile").trim();
+//working A
 
-  if (localStorage.getItem("InputFile").length === 0){
-    fs.writeFile(namedata2write, text_to_save, (err) => {  
+//   var temppath = localStorage.getItem("folder_path").trim();
+
+//   var text_to_save = document.getElementById("editor").innerText;
+// fs.writeFile(namedata2write, text_to_save, (err) => {  
+//        if (err) throw err;
+//});
+  
+	//var text_to_save = document.getElementById("editor").innerText;
+
+  if (localStorage.getItem("InputFile")=== null){
+    fs.writeFileSync(path_fileA + "/" + namedata2writeN, text_to_save, (err) => {  
        if (err) throw err;
                           });  
-    
         }			
         else{
           saveHopeR2();
-          fs.readFile(set_location, function (err, data) {
- if (err) throw err;
- document.getElementById("editor").innerText = data;
-
-});
+          
          
         }
 
-*/
+
 
 
 

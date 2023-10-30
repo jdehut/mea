@@ -1323,8 +1323,19 @@ if (Run_save == "true"){
      
       localStorage.removeItem("InputFile");
       localStorage.removeItem("CaretPosition");
- var TempFilVar = document.getElementById("TempSaveNameInput2").value;
+      localStorage.removeItem("filgit");
+      localStorage.removeItem("fogitB");
+      localStorage.removeItem("fogit");
+      localStorage.removeItem("InputNameNoExtC");
+      localStorage.removeItem("InputNameSoloC");
+      var TempFilVar = document.getElementById("TempSaveNameInput2").value;
+      //var input = this.value;
+      var InputNameSolo = path.basename(TempFilVar);
+      var InputNameNoExt = path.basename(TempFilVar, path.extname(TempFilVar));
+ 
    localStorage.setItem("InputFile", TempFilVar); 	
+   localStorage.setItem("InputNameSoloC", InputNameSolo);
+   localStorage.setItem("InputNameNoExtC", InputNameNoExt);
    CleanSlate();
       saveHopeT3();
       closeNavSav2();
