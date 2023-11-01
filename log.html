@@ -234,15 +234,31 @@ var destination = document.getElementById("HashBackInput").value;
 var lasthash = localStorage.getItem("lasthashcook");
 var namedata2write = "temp_rest";
 var temppath = localStorage.getItem("folder_path").trim();
+var refresh = "true";
 
 
 //  "git revert (--continue | --abort | --quit)" ?
 var process = require("child_process");
-process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "checkout"+" "+destination+" "+namefile+" "+"&& "+gitpath+" "+"commit -m 'point de restauration'",function (err,stdout,stderr) {
-
+//process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "checkout"+" "+destination+" "+namefile+" "+"&& "+gitpath+" "+"commit -m 'point de restauration'",function (err,stdout,stderr) {
+  process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "checkout"+" "+destination+" "+namefile+"",function (err,stdout,stderr) {
     if (err) {
 	    document.getElementById("LogTerm").innerText= stderr;
 	               document.getElementById("LogTerm").innerText= stderr;  
+
+    } else {
+        var lasthash= stdout;
+            document.getElementById("LogTerm").innerText= lasthash+destination; 
+            
+                    
+         
+ }    
+                
+})
+process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "commit -m 'point de restauration'"+" "+namefile+"",function (err,stdout,stderr) {
+    if (err) {
+	    document.getElementById("LogTerm").innerText= stderr;
+	               document.getElementById("LogTerm").innerText= stderr;  
+                 
 
     } else {
         var lasthash= stdout;
@@ -255,12 +271,12 @@ process.exec("cd /  && cd "+pathfile+" "+"&& "+gitpath+" "+ "checkout"+" "+desti
 
 
 
-
 }
 
 
 
 function closeGen(){
+  
 	close(); 
 	 
  }	    

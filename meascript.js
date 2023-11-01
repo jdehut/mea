@@ -118,7 +118,7 @@ var ShortSave = {
 	  feedback();
 	  if (localStorage.getItem("ctrls")== "true"){
 				 saveHopeR2();
-				 GitAdd();
+				// GitAdd();
 				 GitCommit();
 			}	
 			else{
@@ -582,6 +582,7 @@ console.log(data);
   }, false);
 }
 
+// fonction qui permet de déplacer le texte en cas de rafraichissement notamment
 function openGO(){
   var NuncScio = localStorage.getItem("CaretPosition");
   window.scrollTo(0, NuncScio);
