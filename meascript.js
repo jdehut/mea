@@ -1602,13 +1602,14 @@ function GenDocxFusion(){
   })
   }
 function GenSlide(){
+var RawPath = localStorage.getItem("FilePathCook").trim();
 var path_file = localStorage.getItem("folder_path").trim();
 var gitpath = localStorage.getItem("GitPath").trim();
 var filepath = localStorage.getItem("InputFile").trim();
 var pandocpath = localStorage.getItem("PandocPath").trim();
-var set_location = path_file+name_file;
+//var set_location = path_file+name_file;
 var process = require("child_process");
-process.exec(pandocpath + " -s " + filepath + " -o " + filepath + ".pptx",function (err,stdout,stderr) {
+process.exec("cd "+RawPath + "&& "+pandocpath + " -t beamer -s " + filepath + " -o " + filepath + ".pdf",function (err,stdout,stderr) {
 
     if (err) {
 	    document.getElementById("ShowTerm").innerHTML= stderr;

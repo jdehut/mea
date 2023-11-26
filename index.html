@@ -40,7 +40,7 @@
 <input type="button" id="11b" class="menu_bt" value="Docx*" onclick="GenDocxFusion();">
 <input type="button" id="11C" class="menu_bt" value="Epub" onclick="Epub();">
 <input type="button" id="11C" class="menu_bt" value="Epub*" onclick="EpubFusion();">
-<input type="button" id="10" class="menu_bt" value="Pptx" onclick="GenSlide();">
+<input type="button" id="10" class="menu_bt" value="BeamerSlide" onclick="GenSlide();">
 <label for="file2" class="menu_btB">Réécrire</label>
 <input id="file2" class="input-file2"type="file" onclick="Importdocx('#file')"/>
 <span id="ShowTerm" class="term"></span>
@@ -389,6 +389,11 @@ RegisterShortcut();
     fs.writeFileSync(path_fileA + "/" + namedata2writeN, text_to_save, (err) => {  
        if (err) throw err;
                           });  
+        }	
+        if (localStorage.getItem("refreshmain")=== "true"){
+          
+    
+    
         }			
         else{
           saveHopeR2();
